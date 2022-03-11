@@ -1,5 +1,6 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "https://terenciofy.netlify.app/";
+// const redirectUri = "https://terenciofy.netlify.app/";
+const redirectUri = "http://localhost:3000/";
 const clientId = "59e52b8291884f4d9e255b5197cad429";
 
 const scopes = [
@@ -7,7 +8,6 @@ const scopes = [
   "user-read-recently-played",
   "user-read-playback-state",
   "user-top-read",
-  "user-modify-playback-state",
 ];
 
 export const getTokenFromUrl = () => {
@@ -15,8 +15,9 @@ export const getTokenFromUrl = () => {
     .substring(1)
     .split("&")
     .reduce((initial, item) => {
-      let parts = item.split("=");
+      var parts = item.split("=");
       initial[parts[0]] = decodeURIComponent(parts[1]);
+
       return initial;
     }, {});
 };

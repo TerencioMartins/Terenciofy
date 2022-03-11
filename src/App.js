@@ -5,6 +5,7 @@ import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./Components/player/player";
 import { useProviderValue } from "./contexts/provider";
+import ParticleBackground from "./particlesBackground";
 
 const spotify = new SpotifyWebApi();
 
@@ -24,19 +25,20 @@ function App() {
 
       spotify.setAccessToken(_token);
 
-      spotify.getMe().then((user) => {
+      spotify.getMe().then(user => {
         dispatch({
           type: "SET_USER",
           user: user,
         });
       });
+
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: playlists,
         });
       });
-      spotify.getPlaylist('1kP7p1pYQ8SBixphVEpTWI').then(response => {
+      spotify.getPlaylist('5eDufIy8WtiArgp9aPd9su').then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
@@ -45,11 +47,11 @@ function App() {
     }
   }, []);
 
-  return (
-    <div className="app">
-      {token ? <Player spotify={spotify} /> : <Login />}
-    </div>
-  );
+  return <div className="app">
+    {/* <ParticleBackground/> */}
+    {token?
+    <Player spotify={spotify} />:
+    <Login />}</div>
 }
 
 export default App;

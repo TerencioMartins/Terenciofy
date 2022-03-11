@@ -5,10 +5,6 @@
     background-color: black;
 }
 
-.login > img {
-    width: 100%;
-}
-
 .login > a {
     padding: 20px;
     border-radius: 99px;
@@ -17,7 +13,4 @@
     color: white;
     text-decoration: none;
 }
-/* .logo{
-    width: 830px;
-    height: 350px;
-} */
+
