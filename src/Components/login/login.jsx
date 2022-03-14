@@ -10,7 +10,7 @@ function Login() {
     <div className="login">
       <ParticleBackground/>
       <img className="logo" src={terenciofy} />
-      <a><b><i>Disclaimer:</i></b> Infelizmente o processo de autenticação do spotify WEB API passou a funcionar
+      <a><b><i>Atenção:</i></b> Infelizmente o processo de autenticação do spotify WEB API passou a funcionar
         apenas com contas do spotify adicionadas <strong>manualmente</strong>,<br/> então peço perdão
         se aplicação não funcionar como esperava. Você pode checar o video do funcionamento
         no meu linkedin, clicando nesse banner.</a>
