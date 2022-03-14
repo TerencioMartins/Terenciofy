@@ -1,16 +1,19 @@
-.login{
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #1db954;
+background-image: linear-gradient(210deg, #178d40 0%, #141414 100%);
+
+
+
 }
 
 .login > a {
-    padding: 20px;
-    border-radius: 99px;
-    background-color: #1db954;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
+  padding: 20px;
+  border-radius: 99px;
+  background-color: #1db954;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
-
